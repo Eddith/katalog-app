@@ -5,7 +5,7 @@ import Home from "./screens/Home/Home";
 
 function App() {
   return (
-    <>
+     <>
       <Navbars />
 
       <Home />

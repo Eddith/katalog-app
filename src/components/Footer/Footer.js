@@ -9,8 +9,6 @@ import { FaInstagramSquare, FaTwitterSquare, FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
     <>
-      <Container className="mt-5 border-bottom border-dark"></Container>
-
       <Container className="mt-3">
         <Row>
           <Col>

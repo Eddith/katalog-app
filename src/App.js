@@ -23,6 +23,8 @@ function App() {
           <Route path ="/categorydetail" element={<CategoryDetail />} />
         </Routes>
 
+        <div className="mt-5 border-bottom border-bottom"></div>
+
       <Footer />
     </>
   );

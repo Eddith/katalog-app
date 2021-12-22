@@ -1,11 +1,7 @@
 import "./Home.scss";
-import {
-  Container,
-  Carousel,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Container, Carousel, Button, Row, Col } from "react-bootstrap";
+
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -40,19 +36,25 @@ function Home() {
       <Container className="mt-3">
         <Row className="justify-content-center" xs={6}>
           <Col xs>
-            <Button className="w-100" variant="outline-dark">
-              Elektronik
-            </Button>
+            <Link className="link-text-home" to="/categorydetail">
+              <Button className=" w-100" variant="outline-dark">
+                Elektronik
+              </Button>
+            </Link>
           </Col>
           <Col xs>
-            <Button className="w-100" variant="outline-dark">
-              Moda
-            </Button>
+            <Link className="link-text-home" to="/categorydetail">
+              <Button className=" w-100" variant="outline-dark">
+                Moda
+              </Button>
+            </Link>
           </Col>
           <Col xs>
-            <Button className="w-100" variant="outline-dark">
-              Kitap
-            </Button>
+            <Link className="link-text-home" to="/categorydetail">
+              <Button className=" w-100" variant="outline-dark">
+                Kitap
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>

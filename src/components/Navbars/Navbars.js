@@ -1,42 +1,46 @@
 import "./Navbars.scss";
-import {
-  Navbar,
-  Container,
-  Nav
-} from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
+
+import { Link } from "react-router-dom";
 
 import { BsSuitHeart } from "react-icons/bs";
 
 function Navbars() {
   return (
-    <>
-      <Navbar className="border-bottom" collapseOnSelect expand="lg">
-        <Container>
-          <Navbar.Brand className="fw-bold fs-3" href="#home">
+    <Navbar className="border-bottom" collapseOnSelect expand="lg">
+      <Container>
+        <Navbar.Brand className="fw-bold fs-3">
+          <Link className="link-text" to="/">
             Katalog App
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link className="text-dark fw-bold fs-5" href="#home">
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link className="text-dark fw-bold fs-5">
+              <Link className="link-text" to="/">
                 Anasayfa
-              </Nav.Link>
-              <Nav.Link className="text-dark fs-5" href="#urunler">
+              </Link>
+            </Nav.Link>
+            <Nav.Link className="text-dark fs-5">
+              <Link className="link-text" to="/productdetail">
                 Ürünler
-              </Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link className="text-dark fs-4" href="#like">
-                <BsSuitHeart />
-              </Nav.Link>
-              <Nav.Link className="text-dark fw-bold fs-4" href="#favorites">
+              </Link>
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link className="text-dark fs-4">
+              <BsSuitHeart />
+            </Nav.Link>
+            <Nav.Link className="text-dark fw-bold fs-4">
+              <Link className="link-text" to="/favorites">
                 Favorites
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+              </Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
